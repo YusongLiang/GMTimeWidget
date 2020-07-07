@@ -1,0 +1,5 @@
+<resources>
+    <string name="hour">h</string>
+    <string name="minute">min</string>
+    <string name="second">s</string>
+</resources>

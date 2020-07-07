@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_pager_controller"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rb_alarm"
+        style="@style/AppRadioButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Alarm" />
+
+    <RadioButton
+        android:id="@+id/rb_clock"
+        style="@style/AppRadioButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Clock" />
+
+    <RadioButton
+        android:id="@+id/rb_stopwatch"
+        style="@style/AppRadioButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Stopwatch" />
+
+    <RadioButton
+        android:id="@+id/rb_timer"
+        style="@style/AppRadioButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Timer" />
+</RadioGroup>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="hour">小時</string>
+    <string name="minute">分鐘</string>
+    <string name="second">秒</string>
+</resources>

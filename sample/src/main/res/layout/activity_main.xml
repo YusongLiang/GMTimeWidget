@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.gome.gmtimewidget.sample.activity.MainActivity">
+
+    <include
+        layout="@layout/include_pager_controller"
+        android:layout_width="match_parent"
+        android:layout_height="93dp" />
+
+    <com.gome.gmtimewidget.widget.GMTimeSwitcher
+        android:id="@+id/switcher"
+        android:layout_width="262dp"
+        android:layout_height="262dp"
+        android:layout_marginTop="5dp">
+
+        <com.gome.gmtimewidget.widget.GMAlarm
+            android:id="@+id/alarm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.gome.gmtimewidget.widget.GMClock
+            android:id="@+id/clock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.gome.gmtimewidget.widget.GMStopwatch
+            android:id="@+id/stopwatch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.gome.gmtimewidget.widget.GMTimer
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.gome.gmtimewidget.widget.GMTimeSwitcher>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

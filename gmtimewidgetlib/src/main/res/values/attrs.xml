@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GMAlarm">
+        <attr name="alarmTimeZone" format="string" />
+        <attr name="alarmDialWidth" format="dimension" />
+        <attr name="alarmDialLength" format="dimension" />
+        <attr name="alarmAxleRadius" format="dimension" />
+        <attr name="alarmAxleColor" format="color" />
+        <attr name="alarmSecondHandColor" format="color" />
+        <attr name="alarmMinuteHandColor" format="color" />
+        <attr name="alarmHourHandColor" format="color" />
+        <attr name="alarmShadowColor" format="color" />
+        <attr name="alarmSubDialColor" format="color" />
+        <attr name="alarmSecondHandWidth" format="dimension" />
+        <attr name="alarmMinuteHandWidth" format="dimension" />
+        <attr name="alarmHourHandWidth" format="dimension" />
+        <attr name="alarmSubDialLength" format="dimension" />
+        <attr name="alarmSubDialWidth" format="dimension" />
+        <attr name="alarmDialStartColor" format="color" />
+        <attr name="alarmDialEndColor" format="color" />
+        <attr name="alarmDialUncheckedColor" format="color" />
+        <attr name="alarmScaleTextColor" format="color" />
+        <attr name="alarmScaleTextSize" format="dimension" />
+        <attr name="alarmScaleTextMargin" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="GMClock">
+        <attr name="clockTimeZone" format="string" />
+        <attr name="clockDialWidth" format="dimension" />
+        <attr name="clockDialLength" format="dimension" />
+        <attr name="clockAxleRadius" format="dimension" />
+        <attr name="clockAxleColor" format="color" />
+        <attr name="clockSecondHandColor" format="color" />
+        <attr name="clockMinuteHandColor" format="color" />
+        <attr name="clockHourHandColor" format="color" />
+        <attr name="clockShadowColor" format="color" />
+        <attr name="clockSubDialColor" format="color" />
+        <attr name="clockSecondHandWidth" format="dimension" />
+        <attr name="clockMinuteHandWidth" format="dimension" />
+        <attr name="clockHourHandWidth" format="dimension" />
+        <attr name="clockSubDialLength" format="dimension" />
+        <attr name="clockSubDialWidth" format="dimension" />
+        <attr name="clockDialStartColor" format="color" />
+        <attr name="clockDialEndColor" format="color" />
+        <attr name="clockDialUncheckedColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="GMStopwatch">
+        <attr name="stopwatchDialStartColor" format="color" />
+        <attr name="stopwatchDialEndColor" format="color" />
+        <attr name="stopwatchUnCheckedDialColor" format="color" />
+        <attr name="stopwatchBorderColor" format="color" />
+        <attr name="stopwatchInnerDialColor" format="color" />
+        <attr name="stopwatchAxleColor" format="color" />
+        <attr name="stopwatchShadowColor" format="color" />
+        <attr name="stopwatchHandColor" format="color" />
+        <attr name="stopwatchAxleRadius" format="dimension" />
+        <attr name="stopwatchHandWidth" format="dimension" />
+        <attr name="stopwatchOuterDialLength" format="dimension" />
+        <attr name="stopwatchOuterDialWidth" format="dimension" />
+        <attr name="stopwatchInnerDialLength" format="dimension" />
+        <attr name="stopwatchInnerDialWidth" format="dimension" />
+        <attr name="stopwatchBorderLineWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="GMTimer">
+        <attr name="timerDialWidth" format="dimension" />
+        <attr name="timerDialLength" format="dimension" />
+        <attr name="timerDividerLength" format="dimension" />
+        <attr name="timerBorderColor" format="color" />
+        <attr name="timerNumberTextSize" format="dimension" />
+        <attr name="timerNumberTextColor" format="color" />
+        <attr name="timerScaleTextSize" format="dimension" />
+        <attr name="timerScaleTextColor" format="color" />
+        <attr name="timerBorderLineWidth" format="dimension" />
+        <attr name="timerDialStartColor" format="color" />
+        <attr name="timerDialEndColor" format="color" />
+        <attr name="timerTextVerticalOffset" format="dimension" />
+        <attr name="timerTextPadding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="GMTimeSwitcher">
+        <attr name="checkPosition" format="integer" />
+    </declare-styleable>
+</resources>
