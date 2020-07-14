@@ -274,7 +274,7 @@ public class GMAlarm extends AbsTimeView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.translate(mXOffset, mYOffset);
         drawDials(canvas);
         drawScales(canvas);
         drawHands(canvas);

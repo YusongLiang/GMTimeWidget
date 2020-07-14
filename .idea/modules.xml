@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GMTimeWidget.iml" filepath="$PROJECT_DIR$/GMTimeWidget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gmtimewidgetlib/GMTimeWidget-gmtimewidgetlib.iml" filepath="$PROJECT_DIR$/.idea/modules/gmtimewidgetlib/GMTimeWidget-gmtimewidgetlib.iml" group="GMTimeWidget/gmtimewidgetlib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sample/GMTimeWidget-sample.iml" filepath="$PROJECT_DIR$/.idea/modules/sample/GMTimeWidget-sample.iml" group="GMTimeWidget/sample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Github-GMTimeWidget.iml" filepath="$PROJECT_DIR$/.idea/modules/Github-GMTimeWidget.iml" group="GMTimeWidget" />
       <module fileurl="file://$PROJECT_DIR$/gmtimewidgetlib/gmtimewidgetlib.iml" filepath="$PROJECT_DIR$/gmtimewidgetlib/gmtimewidgetlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
     </modules>

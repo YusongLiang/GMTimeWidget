@@ -26,6 +26,8 @@ public abstract class AbsTimeView extends View {
     private boolean mRunning;
     private boolean mStarted;
     private boolean mPaused;
+    protected float mXOffset;
+    protected float mYOffset;
 
     protected Paint mDialPaint;
     protected Paint mSubLinePaint;
@@ -62,6 +64,8 @@ public abstract class AbsTimeView extends View {
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
+        mXOffset = w / 2f;
+        mYOffset = h / 2f;
         mBoundRadius = Math.min(w, h) * 0.5f;
     }
 

@@ -1,8 +1,10 @@
 package com.gome.gmtimewidget.sample.adapter;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +16,8 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> mFragments = new ArrayList<>();
 
-    public CustomPagerAdapter(FragmentManager fm) {
-        super(fm);
+    public CustomPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+        super(fm, behavior);
     }
 
     public void addFragment(Fragment element) {
@@ -27,7 +29,7 @@ public class CustomPagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public Fragment getItem(int position) {
+    public @NonNull Fragment getItem(int position) {
         return mFragments.get(position);
     }
 

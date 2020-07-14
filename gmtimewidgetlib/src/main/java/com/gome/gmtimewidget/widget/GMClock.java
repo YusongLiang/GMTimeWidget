@@ -1,6 +1,5 @@
 package com.gome.gmtimewidget.widget;
 
-import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.content.BroadcastReceiver;
@@ -13,12 +12,13 @@ import android.graphics.DashPathEffect;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.SweepGradient;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.OvershootInterpolator;
+
+import androidx.annotation.Nullable;
 
 import com.gome.gmtimewidget.R;
 
@@ -262,7 +262,7 @@ public class GMClock extends AbsTimeView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.translate(mXOffset, mYOffset);
         drawDials(canvas);
         drawHands(canvas);
     }

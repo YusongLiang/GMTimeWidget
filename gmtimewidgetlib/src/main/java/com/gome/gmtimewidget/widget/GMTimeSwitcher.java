@@ -2,11 +2,11 @@ package com.gome.gmtimewidget.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.viewpager.widget.ViewPager;
 
 import com.gome.gmtimewidget.R;
 import com.gome.gmtimewidget.util.ISwitcher;

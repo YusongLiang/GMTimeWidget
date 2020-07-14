@@ -3,6 +3,7 @@ package com.gome.gmtimewidget.widget;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -236,7 +237,7 @@ public class GMStopwatch extends AbsTimeView implements IStopwatch {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.translate(getWidth() / 2, getHeight() / 2 + mVerticalOffset);
+        canvas.translate(mYOffset, mYOffset + mVerticalOffset);
         drawBorder(canvas);
         drawDials(canvas);
         drawHand(canvas);
@@ -548,23 +549,23 @@ public class GMStopwatch extends AbsTimeView implements IStopwatch {
         return animSet;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_DOWN:
-                if (ViewConfig.STOPWATCH_IS_TOUCHABLE) {
-                    if (mBounds == null) {
-                        mBounds = new RectF();
-                        mBorderSmallPath.computeBounds(mBounds, false);
-                    }
-                    final float x = event.getX() - getWidth() / 2;
-                    final float y = event.getY() - getHeight() / 2 - mVerticalOffset;
-                    if (mBounds.contains(x, y)) {
-                        startRecordAnimation();
-                        return true;
-                    }
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            if (ViewConfig.STOPWATCH_IS_TOUCHABLE) {
+                if (mBounds == null) {
+                    mBounds = new RectF();
+                    mBorderSmallPath.computeBounds(mBounds, false);
                 }
-                return super.onTouchEvent(event);
+                final float x = event.getX() - getWidth() / 2f;
+                final float y = event.getY() - getHeight() / 2f - mVerticalOffset;
+                if (mBounds.contains(x, y)) {
+                    startRecordAnimation();
+                    return true;
+                }
+            }
+            return super.onTouchEvent(event);
         }
         return super.onTouchEvent(event);
     }

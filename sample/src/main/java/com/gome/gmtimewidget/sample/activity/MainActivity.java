@@ -3,14 +3,18 @@ package com.gome.gmtimewidget.sample.activity;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.gome.gmtimewidget.sample.R;
 import com.gome.gmtimewidget.sample.adapter.CustomPagerAdapter;
@@ -32,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e("test_a", "onCreate: ");
         setContentView(R.layout.activity_main);
         switcher = (GMTimeSwitcher) findViewById(R.id.switcher);
         pager = (ViewPager) findViewById(R.id.pager);
@@ -42,27 +45,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        Log.e("test_a", "onConfigurationChanged: ");
-    }
-
-    @Override
-    public void onMultiWindowModeChanged(boolean isInMultiWindowMode) {
-        super.onMultiWindowModeChanged(isInMultiWindowMode);
-        Log.e("test_a", "onMultiWindowModeChanged: " + isInMultiWindowMode);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        Log.e("test_a", "onSaveInstanceState: ");
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        Log.e("test_a", "onRestoreInstanceState: ");
         checkRadioButton(0);
     }
 
@@ -73,7 +57,8 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     }
 
     private void initViewPager() {
-        CustomPagerAdapter adapter = new CustomPagerAdapter(getSupportFragmentManager());
+        CustomPagerAdapter adapter = new CustomPagerAdapter(getSupportFragmentManager(),
+                FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         adapter.addFragment(new AlarmFragment());
         adapter.addFragment(new ClockFragment());
         adapter.addFragment(new StopwatchFragment());

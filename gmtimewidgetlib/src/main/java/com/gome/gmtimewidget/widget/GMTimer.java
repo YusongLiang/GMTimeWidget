@@ -275,7 +275,7 @@ public class GMTimer extends AbsTimeView implements ITimer {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        canvas.translate(getWidth() / 2, getHeight() / 2);
+        canvas.translate(mXOffset, mYOffset);
         drawBorder(canvas);
         drawDial(canvas);
         drawNumberText(canvas);
